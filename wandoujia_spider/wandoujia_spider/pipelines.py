@@ -4,8 +4,10 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
-
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
 
 class WandoujiaSpiderPipeline(object):
-    def process_item(self, item, spider):
-        return item
+  def process_item(self, item, spider):
+    print item["category"] + "\t" + item["name"]

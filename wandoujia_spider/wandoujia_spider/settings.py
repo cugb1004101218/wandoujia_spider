@@ -13,7 +13,11 @@ BOT_NAME = 'wandoujia_spider'
 
 SPIDER_MODULES = ['wandoujia_spider.spiders']
 NEWSPIDER_MODULE = 'wandoujia_spider.spiders'
+ITEM_PIPELINES = {
+  'wandoujia_spider.pipelines.WandoujiaSpiderPipeline': 100,
+}
 
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'wandoujia_spider (+http://www.yourdomain.com)'
